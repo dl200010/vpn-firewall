@@ -1,4 +1,4 @@
-#!/sbin/runscript
+#!/sbin/openrc-run
 
 ## vpnfirewall config
 VPNFIREWALL_CONFIG="/etc/vpnfirewall/config"
@@ -12,7 +12,7 @@ VPNFIREWALL_CONFIG="/etc/vpnfirewall/config"
 ######################################################################
 
 depend() {
-  after xdm
+  after display-manager
   before openvpn
 }
 
@@ -55,7 +55,7 @@ start() {
   VPN_URLS=$(echo "$VPN_URLS" | xargs -n1 | sort -u | xargs)
 
   ## get the ip addresses of the VPN server 
-  VPN_SERVERS=$(getent hosts $VPN_URLS | awk '{print $1}')
+  VPN_SERVERS=$(getent ahostsv4 $VPN_URLS | awk '{print $1}')
   VPN_SERVERS=$(echo "$VPN_SERVERS" | xargs -n1 | sort -u | xargs)
 
   ###########################
@@ -123,6 +123,11 @@ start() {
 
   ## Traffic on the loopback interface is accepted.
   iptables -A INPUT -i lo -j ACCEPT
+
+  ## Accept incoming connections from local network.
+  for NET in $LOCAL_NET; do
+    iptables -A INPUT -d "$NET" -j ACCEPT
+  done
 
   ## Established incoming connections are accepted.
   iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
