@@ -35,24 +35,7 @@ manipulate the firewall rules.
 
 # How to Use
 
-See:
-
-The folder structure here is the expected folders they will run from out of root (/).
-
-# Alternatives
-
-* One could play with the linux equivalent of the [route](http://cranthetrader.blogspot.se/2011/10/dont-allow-non-vpn-traffic.html) command.
-* [Hardening your VPN Setup with iptables](http://www.inputoutput.io/hardening-your-vpn-setup-with-iptables/)
-* [VPNCheck](http://www.guavi.com/vpncheck_free.html) - No source code. Nice looking user interface.
-* [VPNetMon](http://vpnetmon.webs.com/) - No source code. Windows only. Checks every, let's say 500 ms, if the VPN IP is still valid, if not, kill a list of applications. This is not very secure, it's a game if that time period is sufficient to stop a leak and if killing the applications is fast enough. Nice looking user interface.
-* [OPENVPN Watchdog](http://openvpnchecker.com/) - No source code. Windows only. Nice looking user interface.
-* [VPN Lifeguard](https://sourceforge.net/projects/vpnlifeguard/) supports PPTP and IPSec, not OpenVPN. Windows only. Nice looking user interface.
-* [ForceBindIP](http://www.r1ch.net/stuff/forcebindip/) - Bind any Windows application to a specific interface. No source code. Windows only.
-* Some individual VPN services distribute closed source applications with vendor lock in. Nice looking user interfaces.
-* One could tighten the firewall rules even more, by creating a dedicated user account for (Open)VPN, allow only the (Open)VPN process to connect to the VPN server. (VPN-Firewall lets all processes connect to the VPN IP, not only (Open)VPN. However, the setup would become more difficult, it may require modifying the OpenVPN init script.)
-* Much safer would be, if one would build something similar to [Whonix](https://github.com/adrelanos/Whonix). Very briefly, while Whonix uses Tor and consists of a Gateway and a Workstation, since the Workstation doesn't know it's own external IP, the Workstation can never leak it and never connect in the clear. One could create similarly a VPNBOX.
-* [Windows Firewall](https://zorrovpn.com/articles/windows-firewall-vpn-only). Windows only.
-* [IP Security Policies](https://superuser.com/questions/268902/how-to-block-all-traffic-but-one-ip-in-windows-firewall). Windows only.
+See: gentoo/README.md
 
 # Forks, Patches, Testers, Comments, etc.
 
