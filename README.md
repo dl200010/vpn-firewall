@@ -7,7 +7,6 @@ It's much safer when it fails closed, i.e. when the VPN connection breaks down, 
 
 * Forbid outgoing traffic after the VPN / tunnel software broke down for some reason.
 * Tight firewall rules, using iptables policy drop.
-* Defeat [shared VPN/Tor server leak bug](https://github.com/adrelanos/vpn-firewall/issues/12).
 * Only designed with OpenVPN in mind.
 * You should test if it does what it claims.
 * Open Source / Free Software
