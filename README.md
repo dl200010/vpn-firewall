@@ -39,7 +39,7 @@ manipulate the firewall rules.
 
 See:
 
-https://www.whonix.org/wiki/VPN-Firewall#How_to_use_VPN-Firewall
+The folder structure here is the expected folders they will run from out of root (/).
 
 # Alternatives
 
@@ -60,13 +60,18 @@ https://www.whonix.org/wiki/VPN-Firewall#How_to_use_VPN-Firewall
 
 Welcome.
 
-# Author
+# Original Author
 
 * Patrick Schleizer
 * e-mail: adrelanos@riseup.net
 * [gpg](https://www.whonix.org/wiki/Patrick_Schleizer): 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
 * twitter: https://twitter.com/Whonix
 * [Donate](https://www.whonix.org/wiki/Donate)
+
+# Gentoo Author
+
+* Chris Dangerfield
+* e-mail: dl200010@gmail.com
 
 # License
 
