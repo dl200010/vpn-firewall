@@ -35,7 +35,11 @@ manipulate the firewall rules.
 
 # How to Use
 
-Either copy the files yourself, or you can add the https://github.com/dl200010/dl-overlay portage overlay and emerge it, but portage will not install the /etc/openvpn/* files. Those will have to be manually setup as part of the openVPN install with your connection files. Modify /etc/vpnfirewall/config to point to your openvpn.conf file and your local IPv4 network.
+Either copy the files yourself, or you can add the https://github.com/dl200010/dl-overlay portage overlay and emerge it, but portage will not install the /etc/openvpn/* files.
+Those will have to be manually setup as part of the openVPN install with your connection files.
+Modify /etc/vpnfirewall/config to point to your openvpn.conf file and your local IPv4 network.
+Use "/etc/init.d/vpnfirewall start" to start right away.
+Use "rc-update add vpnfirewall default" to auto start when booting up.
 
 # Forks, Patches, Testers, Comments, etc.
 
