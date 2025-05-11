@@ -40,6 +40,7 @@ manipulate the firewall rules.
 
 # How to Use
 
+* Emerge the dependencies above
 * Install the files in the gentoo folder by
   * Coping the files, or
   * Use the https://github.com/dl200010/dl-overlay portage overlay and "emerge net-vpn/vpn-firewall".
