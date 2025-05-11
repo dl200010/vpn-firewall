@@ -33,6 +33,11 @@ manipulate the firewall rules.
 
 [1] This probably does not apply to VMs / computers behind a VPN-Gateway (when using the #Forwarding feature).
 
+# Dependencies
+
+* net-firewall/iptables
+* net-vpn/openvpn
+
 # How to Use
 
 * Install the files in the gentoo folder by
