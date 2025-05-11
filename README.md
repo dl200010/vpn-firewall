@@ -40,6 +40,7 @@ Those will have to be manually setup as part of the openVPN install with your co
 Modify /etc/vpnfirewall/config to point to your openvpn.conf file and your local IPv4 network.
 Use "/etc/init.d/vpnfirewall start" to start right away.
 Use "rc-update add vpnfirewall default" to auto start when booting up.
+Edit "/etc/init.d/openvpn" to add "need vpnfirewall" to the end of "depend()"
 
 # Forks, Patches, Testers, Comments, etc.
 
