@@ -35,6 +35,8 @@ manipulate the firewall rules.
 
 # Dependencies
 
+* sys-libs/glibc
+* sys-apps/coreutils
 * sys-apps/grep
 * sys-apps/sed
 * sys-apps/gawk
