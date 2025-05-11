@@ -35,6 +35,9 @@ manipulate the firewall rules.
 
 # Dependencies
 
+* sys-apps/grep
+* sys-apps/sed
+* sys-apps/gawk
 * net-firewall/iptables
 * net-vpn/openvpn
 
