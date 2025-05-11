@@ -38,7 +38,7 @@ manipulate the firewall rules.
 * Install the files in the gentoo folder by
   * Coping the files, or
   * Use the https://github.com/dl200010/dl-overlay portage overlay and "emerge net-vpn/vpn-firewall".
-* Modify /etc/vpnfirewall/config to point to your openvpn.conf file and your local IPv4 network.
+* Edit /etc/vpnfirewall/config to point to your openvpn.conf file and your local IPv4 network.
 * Edit /etc/init.d/openvpn to add "need vpnfirewall" to the end of "depend()".
 * Use "/etc/init.d/vpnfirewall start" to start right away.
 * Use "rc-update add vpnfirewall default" to auto start when booting up.
