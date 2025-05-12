@@ -40,6 +40,7 @@ manipulate the firewall rules.
 * sys-apps/grep
 * sys-apps/sed
 * sys-apps/gawk
+* sys-apps/iproute2
 * net-firewall/iptables
 * net-vpn/openvpn
 
