@@ -36,7 +36,8 @@ start() {
   VPN_INTERFACE=$(grep -P -i 'VPN_INTERFACE=.*' $VPNFIREWALL_CONFIG | sed 's/"//g' | sed "s/'//g" | sed 's/.*=//')
 
   ## Destinations you don not want routed through the VPN.
-  LOCAL_NET=$(grep -P -i 'LOCAL_NET=.*' $VPNFIREWALL_CONFIG | sed 's/"//g' | sed "s/'//g" | sed 's/.*=//')
+  LOCAL_NET=$(ip r | grep "link" | grep -v "$VPN_INTERFACE" | grep -o -E "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/[0-9]+" | tr '\n' ' ')
+  LOCAL_NET=$(echo "$LOCAL_NET 127.0.0.0/8")
 
   ## get protocal from config file
   VPN_PROTOS=$(grep -P -i '^proto[\s][^\s]*$' $VPN_CONFIG)
