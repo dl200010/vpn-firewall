@@ -46,10 +46,11 @@ manipulate the firewall rules.
 
 # How to Use
 
-* Emerge the dependencies above
+* Emerge the dependencies above.
 * Install the files in the gentoo folder by
   * Coping the files, or
   * Use the https://github.com/dl200010/dl-overlay portage overlay and "emerge net-vpn/vpn-firewall".
+    * This will install the dependencies above.
 * Edit /etc/vpnfirewall/config to point to your openvpn.conf file and openvpn interface.
 * Edit /etc/init.d/openvpn to add "need vpnfirewall" to the end of "depend()".
 * Use "/etc/init.d/vpnfirewall start" to start right away.
