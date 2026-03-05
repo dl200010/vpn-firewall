@@ -42,7 +42,13 @@ manipulate the firewall rules.
 * sys-apps/gawk
 * sys-apps/iproute2
 * net-firewall/iptables
+  * https://wiki.gentoo.org/wiki/Iptables
+  * Kernel 6.17+
+    * The kernel needs "CONFIG_NETFILTER_XTABLES_LEGACY" / "Netfilter legacy tables support" turned on.
+    * I will work on moving over to nftables, eventually.
+    * https://www.kernelconfig.io/config_netfilter_xtables_legacy
 * net-vpn/openvpn
+* Kernel compiled with
 
 # How to Use
 
